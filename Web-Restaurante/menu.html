@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carta | Restaurante Sabor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Restaurante Sabor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="menu.html">Carta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Nuestra Carta</h2>
+          <p>
+            Descubre una selección de platos pensados para disfrutar con calma,
+            sabor y una presentación cuidada.
+          </p>
+        </div>
+
+        <div class="menu-toolbar reveal">
+          <div class="menu-search">
+            <input
+              type="text"
+              id="menuSearch"
+              class="form-control"
+              placeholder="Buscar plato..."
+              aria-label="Buscar plato"
+            />
+          </div>
+
+          <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="entrantes">
+              Entrantes
+            </button>
+            <button class="filter-btn" data-filter="principales">
+              Principales
+            </button>
+            <button class="filter-btn" data-filter="postres">Postres</button>
+            <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+          </div>
+        </div>
+
+        <div class="row g-4" id="menuItems">
+          <!-- ENTRANTES -->
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="entrantes"
+            data-name="ensalada de temporada"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=900&q=80"
+                  alt="Ensalada de temporada"
+                  class="dish-image"
+                />
+                <span class="dish-badge">Nuevo</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Ensalada de temporada</h3>
+                  <span class="dish-price">8€</span>
+                </div>
+                <p>
+                  Hojas frescas, tomate cherry, queso suave y aliño de la casa.
+                </p>
+                <div class="dish-meta">
+                  <span>Entrante</span>
+                  <span>Fresco</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="entrantes"
+            data-name="croquetas caseras"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1604908176997-43156c288032?auto=format&fit=crop&w=900&q=80"
+                  alt="Croquetas caseras"
+                  class="dish-image"
+                />
+                <span class="dish-badge popular">Popular</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Croquetas caseras</h3>
+                  <span class="dish-price">9€</span>
+                </div>
+                <p>
+                  Crujientes por fuera, cremosas por dentro y recién hechas.
+                </p>
+                <div class="dish-meta">
+                  <span>Entrante</span>
+                  <span>Casero</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- PRINCIPALES -->
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="principales"
+            data-name="arroz especial"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=900&q=80"
+                  alt="Arroz especial"
+                  class="dish-image"
+                />
+                <span class="dish-badge popular">Popular</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Arroz especial</h3>
+                  <span class="dish-price">18€</span>
+                </div>
+                <p>
+                  Receta sabrosa ideal para compartir, con producto fresco y
+                  mucho sabor.
+                </p>
+                <div class="dish-meta">
+                  <span>Principal</span>
+                  <span>Para compartir</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="principales"
+            data-name="pasta artesanal"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80"
+                  alt="Pasta artesanal"
+                  class="dish-image"
+                />
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Pasta artesanal</h3>
+                  <span class="dish-price">16€</span>
+                </div>
+                <p>Pasta al punto con salsa casera y un acabado elegante.</p>
+                <div class="dish-meta">
+                  <span>Principal</span>
+                  <span>Artesanal</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- POSTRES -->
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="postres"
+            data-name="tarta de queso"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=80"
+                  alt="Tarta de queso"
+                  class="dish-image"
+                />
+                <span class="dish-badge">Nuevo</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Tarta de queso</h3>
+                  <span class="dish-price">7€</span>
+                </div>
+                <p>Textura cremosa, sabor intenso y presentación artesanal.</p>
+                <div class="dish-meta">
+                  <span>Postre</span>
+                  <span>Cremoso</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="postres"
+            data-name="tiramisu"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=80"
+                  alt="Tiramisú"
+                  class="dish-image"
+                />
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Tiramisú</h3>
+                  <span class="dish-price">7€</span>
+                </div>
+                <p>Capas suaves con café y crema para un final elegante.</p>
+                <div class="dish-meta">
+                  <span>Postre</span>
+                  <span>Clásico</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- BEBIDAS -->
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="bebidas"
+            data-name="refrescos"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80"
+                  alt="Refrescos"
+                  class="dish-image"
+                />
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Refrescos</h3>
+                  <span class="dish-price">3€</span>
+                </div>
+                <p>
+                  Selección de bebidas frías para acompañar cualquier plato.
+                </p>
+                <div class="dish-meta">
+                  <span>Bebida</span>
+                  <span>Frío</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            data-category="bebidas"
+            data-name="copa de vino"
+          >
+            <article class="dish-card">
+              <div class="dish-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80"
+                  alt="Copa de vino"
+                  class="dish-image"
+                />
+                <span class="dish-badge premium">Premium</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-top">
+                  <h3>Copa de vino</h3>
+                  <span class="dish-price">4€</span>
+                </div>
+                <p>
+                  Vinos seleccionados para acompañar la experiencia
+                  gastronómica.
+                </p>
+                <div class="dish-meta">
+                  <span>Bebida</span>
+                  <span>Selección</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="noResults" class="no-results d-none">
+          <p>No se encontraron platos con esa búsqueda.</p>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/34600123456?text=Hola,%20quiero%20hacer%20una%20reserva"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M19.11 17.23c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.91 2.92 4.62 4.09.64.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.03 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.47 1.71 6.41L3.2 28.8l6.57-1.72c1.86 1.01 3.96 1.54 6.26 1.54h.01c7.06 0 12.79-5.73 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05A12.73 12.73 0 0 0 16.03 3.2zm0 23.27h-.01c-1.91 0-3.78-.51-5.42-1.47l-.39-.23-3.9 1.02 1.04-3.8-.25-.39a10.58 10.58 0 0 1-1.63-5.68c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.51 3.11a10.55 10.55 0 0 1 3.11 7.51c0 5.87-4.77 10.64-10.63 10.64z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

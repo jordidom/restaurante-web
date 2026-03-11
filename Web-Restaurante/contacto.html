@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | Restaurante Sabor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Restaurante Sabor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Carta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Contacto</h2>
+          <p>
+            Una página clara y elegante para facilitar la comunicación con el
+            restaurante.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6 reveal-left">
+            <div class="form-section">
+              <h4 class="mb-4">Envíanos un mensaje</h4>
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Nombre</label>
+                  <input type="text" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Mensaje</label>
+                  <textarea class="form-control" rows="5" required></textarea>
+                </div>
+
+                <button class="btn btn-custom">Enviar mensaje</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-6 reveal-right">
+            <div class="info-box">
+              <h4 class="mb-4">Información del restaurante</h4>
+              <p><strong>Dirección:</strong> Calle Principal 123, Palma</p>
+              <p><strong>Teléfono:</strong> +34 600 123 456</p>
+              <p><strong>Email:</strong> info@restaurantesabor.com</p>
+              <p>
+                <strong>Horario:</strong><br />Lunes a viernes: 12:00 - 23:00<br />Sábado
+                y domingo: 13:00 - 00:00
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 reveal">
+            <div class="map-frame ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps?q=Palma+de+Mallorca&output=embed"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/34600123456"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M19.11 17.23c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.91 2.92 4.62 4.09.64.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.03 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.47 1.71 6.41L3.2 28.8l6.57-1.72c1.86 1.01 3.96 1.54 6.26 1.54h.01c7.06 0 12.79-5.73 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05A12.73 12.73 0 0 0 16.03 3.2zm0 23.27h-.01c-1.91 0-3.78-.51-5.42-1.47l-.39-.23-3.9 1.02 1.04-3.8-.25-.39a10.58 10.58 0 0 1-1.63-5.68c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.51 3.11a10.55 10.55 0 0 1 3.11 7.51c0 5.87-4.77 10.64-10.63 10.64z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
