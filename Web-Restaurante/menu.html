@@ -67,24 +67,37 @@
           </div>
 
           <div class="menu-filters">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="entrantes">
+            <button class="filter-btn active" data-filter="all" type="button">
+              Todos
+            </button>
+            <button class="filter-btn" data-filter="entrantes" type="button">
               Entrantes
             </button>
-            <button class="filter-btn" data-filter="principales">
+            <button class="filter-btn" data-filter="principales" type="button">
               Principales
             </button>
-            <button class="filter-btn" data-filter="postres">Postres</button>
-            <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+            <button class="filter-btn" data-filter="postres" type="button">
+              Postres
+            </button>
+            <button class="filter-btn" data-filter="bebidas" type="button">
+              Bebidas
+            </button>
           </div>
         </div>
 
         <div class="row g-4" id="menuItems">
           <!-- ENTRANTES -->
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="entrantes"
+            data-category-label="Entrante"
             data-name="ensalada de temporada"
+            data-title="Ensalada de temporada"
+            data-price="8€"
+            data-description="Hojas frescas, tomate cherry, queso suave y aliño de la casa."
+            data-ingredients="Lechuga variada, tomate cherry, queso suave, cebolla morada, vinagreta especial."
+            data-allergens="Lácteos"
+            data-image="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -112,9 +125,16 @@
           </div>
 
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="entrantes"
+            data-category-label="Entrante"
             data-name="croquetas caseras"
+            data-title="Croquetas caseras"
+            data-price="9€"
+            data-description="Crujientes por fuera, cremosas por dentro y recién hechas."
+            data-ingredients="Bechamel, jamón, leche, harina, pan rallado y especias."
+            data-allergens="Gluten, lácteos, huevo"
+            data-image="https://images.unsplash.com/photo-1604908176997-43156c288032?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -143,9 +163,16 @@
 
           <!-- PRINCIPALES -->
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="principales"
+            data-category-label="Principal"
             data-name="arroz especial"
+            data-title="Arroz especial"
+            data-price="18€"
+            data-description="Receta sabrosa ideal para compartir, con producto fresco y mucho sabor."
+            data-ingredients="Arroz, caldo casero, verduras de temporada, marisco o carne según versión."
+            data-allergens="Marisco, sulfitos"
+            data-image="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -174,9 +201,16 @@
           </div>
 
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="principales"
+            data-category-label="Principal"
             data-name="pasta artesanal"
+            data-title="Pasta artesanal"
+            data-price="16€"
+            data-description="Pasta al punto con salsa casera y un acabado elegante."
+            data-ingredients="Pasta fresca, salsa casera, queso curado, albahaca y aceite de oliva."
+            data-allergens="Gluten, lácteos, huevo"
+            data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -202,9 +236,16 @@
 
           <!-- POSTRES -->
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="postres"
+            data-category-label="Postre"
             data-name="tarta de queso"
+            data-title="Tarta de queso"
+            data-price="7€"
+            data-description="Textura cremosa, sabor intenso y presentación artesanal."
+            data-ingredients="Queso crema, nata, azúcar, galleta y mantequilla."
+            data-allergens="Gluten, lácteos, huevo"
+            data-image="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -230,9 +271,16 @@
           </div>
 
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="postres"
+            data-category-label="Postre"
             data-name="tiramisu"
+            data-title="Tiramisú"
+            data-price="7€"
+            data-description="Capas suaves con café y crema para un final elegante."
+            data-ingredients="Bizcocho, café, mascarpone, cacao y azúcar."
+            data-allergens="Gluten, lácteos, huevo"
+            data-image="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -258,9 +306,16 @@
 
           <!-- BEBIDAS -->
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="bebidas"
+            data-category-label="Bebida"
             data-name="refrescos"
+            data-title="Refrescos"
+            data-price="3€"
+            data-description="Selección de bebidas frías para acompañar cualquier plato."
+            data-ingredients="Refresco a elegir, hielo y limón opcional."
+            data-allergens="Puede variar según la bebida"
+            data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -287,9 +342,16 @@
           </div>
 
           <div
-            class="col-md-6 col-lg-4 menu-card reveal-zoom"
+            class="col-md-6 col-lg-4 menu-card"
             data-category="bebidas"
+            data-category-label="Bebida"
             data-name="copa de vino"
+            data-title="Copa de vino"
+            data-price="4€"
+            data-description="Vinos seleccionados para acompañar la experiencia gastronómica."
+            data-ingredients="Vino tinto, blanco o rosado según selección."
+            data-allergens="Sulfitos"
+            data-image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80"
           >
             <article class="dish-card">
               <div class="dish-image-wrap">
@@ -324,6 +386,131 @@
       </div>
     </section>
 
+    <div
+      class="modal fade"
+      id="dishModal"
+      tabindex="-1"
+      aria-labelledby="modalDishTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content dish-modal-content">
+          <button
+            type="button"
+            class="btn-close dish-modal-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <img id="modalDishImage" src="" alt="" class="dish-modal-image" />
+            </div>
+
+            <div class="col-lg-6">
+              <div class="dish-modal-body">
+                <div class="dish-modal-header">
+                  <span
+                    id="modalDishCategory"
+                    class="dish-modal-category"
+                  ></span>
+                  <h3 id="modalDishTitle"></h3>
+                  <div id="modalDishPrice" class="dish-modal-price"></div>
+                </div>
+
+                <p id="modalDishDescription" class="dish-modal-description"></p>
+
+                <div class="dish-modal-block">
+                  <h5>Ingredientes</h5>
+                  <p id="modalDishIngredients"></p>
+                </div>
+
+                <div class="dish-modal-block">
+                  <h5>Alérgenos</h5>
+                  <p id="modalDishAllergens"></p>
+                </div>
+
+                <a
+                  href="https://wa.me/34600123456?text=Hola,%20quiero%20hacer%20una%20reserva"
+                  target="_blank"
+                  class="btn btn-custom mt-3"
+                >
+                  Reservar por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-padding qr-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="qr-card reveal">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <span class="qr-label">Carta digital</span>
+                  <h3>Escanea y abre la carta en tu móvil</h3>
+                  <p>
+                    Comparte esta carta digital con tus clientes para que puedan
+                    verla de forma rápida, cómoda y sin necesidad de tocar menús
+                    físicos.
+                  </p>
+                  <p class="mb-0">
+                    Ideal para mesas, barra, delivery o escaparate.
+                  </p>
+                </div>
+
+                <div class="col-md-5 text-center">
+                  <div class="qr-box">
+                    <div id="qrcode"></div>
+                  </div>
+                  <p class="qr-note mt-3 mb-0">
+                    Escanea con la cámara del móvil
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5>Restaurante Sabor</h5>
+            <p>
+              Plantilla profesional adaptable para cualquier restaurante o
+              cafetería.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Enlaces</h5>
+            <p><a href="index.html">Inicio</a></p>
+            <p><a href="menu.html">Carta</a></p>
+            <p><a href="reservas.html">Reservas</a></p>
+            <p><a href="contacto.html">Contacto</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <p>Calle Principal 123</p>
+            <p>+34 600 123 456</p>
+            <p>info@restaurantesabor.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="mb-0">
+            © 2026 Restaurante Sabor. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <a
       href="https://wa.me/34600123456?text=Hola,%20quiero%20hacer%20una%20reserva"
       class="whatsapp-float"
@@ -338,7 +525,8 @@
     </a>
 
     <script src="js/main.js"></script>
-    <script src="js/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

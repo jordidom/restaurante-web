@@ -4,15 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("menuSearch");
   const noResults = document.getElementById("noResults");
 
+  const modalElement = document.getElementById("dishModal");
+  const dishModal = modalElement ? new bootstrap.Modal(modalElement) : null;
+  const modalWhatsappBtn = document.querySelector("#dishModal .btn.btn-custom");
+
   let currentFilter = "all";
 
   function filterMenu() {
-    const searchTerm = searchInput.value.trim().toLowerCase();
+    const searchTerm = searchInput
+      ? searchInput.value.trim().toLowerCase()
+      : "";
     let visibleCount = 0;
 
     menuCards.forEach((card) => {
       const category = card.dataset.category;
-      const name = card.dataset.name.toLowerCase();
+      const name = (card.dataset.name || "").toLowerCase();
 
       const matchesFilter =
         currentFilter === "all" || category === currentFilter;
@@ -26,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    noResults.classList.toggle("d-none", visibleCount > 0);
+    if (noResults) {
+      noResults.classList.toggle("d-none", visibleCount > 0);
+    }
   }
 
   filterButtons.forEach((button) => {
@@ -40,7 +48,63 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  searchInput.addEventListener("input", filterMenu);
+  if (searchInput) {
+    searchInput.addEventListener("input", filterMenu);
+  }
+
+  menuCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      if (!dishModal) return;
+
+      const title = card.dataset.title || "";
+      const price = card.dataset.price || "";
+      const category = card.dataset.categoryLabel || "";
+      const description = card.dataset.description || "";
+      const ingredients = card.dataset.ingredients || "";
+      const allergens = card.dataset.allergens || "";
+      const image = card.dataset.image || "";
+
+      const modalTitle = document.getElementById("modalDishTitle");
+      const modalPrice = document.getElementById("modalDishPrice");
+      const modalCategory = document.getElementById("modalDishCategory");
+      const modalDescription = document.getElementById("modalDishDescription");
+      const modalIngredients = document.getElementById("modalDishIngredients");
+      const modalAllergens = document.getElementById("modalDishAllergens");
+      const modalImage = document.getElementById("modalDishImage");
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalPrice) modalPrice.textContent = price;
+      if (modalCategory) modalCategory.textContent = category;
+      if (modalDescription) modalDescription.textContent = description;
+      if (modalIngredients) modalIngredients.textContent = ingredients;
+      if (modalAllergens) modalAllergens.textContent = allergens;
+      if (modalImage) {
+        modalImage.src = image;
+        modalImage.alt = title;
+      }
+
+      if (modalWhatsappBtn) {
+        const message = `Hola, quiero reservar y me interesa el plato: ${title}`;
+        modalWhatsappBtn.href = `https://wa.me/34600123456?text=${encodeURIComponent(message)}`;
+      }
+
+      dishModal.show();
+    });
+  });
 
   filterMenu();
+
+  const qrContainer = document.getElementById("qrcode");
+
+  if (qrContainer) {
+    qrContainer.innerHTML = "";
+
+    const menuUrl = `${window.location.origin}${window.location.pathname}`;
+
+    new QRCode(qrContainer, {
+      text: menuUrl,
+      width: 180,
+      height: 180,
+    });
+  }
 });
