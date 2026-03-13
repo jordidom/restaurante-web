@@ -5,10 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  // Sustituye estos valores por los tuyos de EmailJS
   const EMAILJS_PUBLIC_KEY = "RnDeIRINTPp14Mx5Q";
   const EMAILJS_SERVICE_ID = "service_cyk18k8";
-  const EMAILJS_TEMPLATE_ID = "template_0cugirl";
+
+  // Plantilla que recibe el restaurante
+  const EMAILJS_TEMPLATE_ADMIN = "template_0cugirl";
+
+  // Plantilla nueva para confirmar al cliente
+  const EMAILJS_TEMPLATE_CLIENTE = "template_lo5tz2c";
 
   emailjs.init({
     publicKey: EMAILJS_PUBLIC_KEY,
@@ -28,12 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+      // 1. Email al restaurante
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ADMIN, form);
+
+      // 2. Email de confirmación al cliente
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_CLIENTE,
+        form,
+      );
 
       if (mensajeReserva) {
         mensajeReserva.className = "alert alert-success mt-3";
         mensajeReserva.textContent =
-          "Reserva enviada correctamente. Te responderemos lo antes posible.";
+          "Reserva enviada correctamente. También hemos enviado una confirmación a tu correo.";
       }
 
       form.reset();
